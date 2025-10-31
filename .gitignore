@@ -1,0 +1,36 @@
+# Terraform State & Working Directories (CRITICAL)
+**/.terraform/*
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
+
+# Sensitive Config Files
+*.tfvars
+*.tfvars.json
+terraform.tfvars # (Explicitly listing common file)
+
+# Local Override & Crash Logs
+*_override.tf
+*_override.tf.json
+override.tf
+override.tf.json
+crash.log
+crash.*.log
+
+# SSH Keys
+terraform-key
+terraform-key.pub
+*.pem
+
+# Non-Terraform files
+.jenkins/
+build/
+target/
+.DS_Store
+Thumbs.db
+
+# NOTE: The file .terraform.lock.hcl is INTENTIONALLY NOT IGNORED.
+# It should be committed to lock provider versions.
